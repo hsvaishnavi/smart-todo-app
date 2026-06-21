@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Manager | Vaishnavi HS</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>
+                <i class="fa-solid fa-list-check"></i>
+                Smart Task Manager
+            </h1>
+
+            <button id="themeToggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a task">
+
+            <select id="category">
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+            </select>
+
+            <select id="priority">
+                <option value="High">High Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="Low">Low Priority</option>
+            </select>
+
+            <input type="date" id="dueDate">
+
+            <button id="addBtn">
+                <i class="fa-solid fa-plus"></i>
+                Add Task
+            </button>
+
+        </div>
+
+        <!-- Search -->
+        <div class="search-section">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks...">
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button class="filter active"
+                    data-filter="all">
+                All
+            </button>
+
+            <button class="filter"
+                    data-filter="completed">
+                Completed
+            </button>
+
+            <button class="filter"
+                    data-filter="pending">
+                Pending
+            </button>
+
+            <select id="sortTasks">
+                <option value="date">Sort by Date</option>
+                <option value="priority">Sort by Priority</option>
+            </select>
+
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats">
+
+            <div class="card">
+                <h3 id="totalCount">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="card">
+                <h3 id="completedCount">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="card">
+                <h3 id="pendingCount">0</h3>
+                <p>Pending</p>
+            </div>
+
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-container">
+
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+            <span id="progressText">
+                0% Completed
+            </span>
+
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Clear All Button -->
+        <button id="clearAllBtn">
+            <i class="fa-solid fa-trash"></i>
+            Clear All Tasks
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
